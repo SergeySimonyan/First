@@ -1,11 +1,17 @@
 {% extends 'home/base.html' %}
 
 {% block title %}
-Home Page
+{{ title }}
 {% endblock %}
 
 {% block content %}
     <h1>Home Page</h1>
-    <p1>Home Page</p1>
+    {% for el in tasks %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.title }}</h3>
+            <p>{{ el.task }}</p>
+        </div>
+
+    {% endfor %}
 {% endblock %}
 
